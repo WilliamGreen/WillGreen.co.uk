@@ -1,0 +1,60 @@
+/* Custom colors */
+
+/* ACCENT COLOR */
+.dropcap:first-letter  {
+	background-color:#2AC4EA;
+}
+.btn-link:hover, .btn-link:focus, .btn-link:active, .heading-underlined:after, .heading-underlined.black:after, .heading-strike:before, .heading-strike:after, .heading-crossed:after, .filter a:hover, .filter a:focus, .page-numbers li span, .footer-social a:hover, .footer-social a:focus, .nav-tabs li.active a, .nav-tabs li a:hover, .nav-tabs li a:focus, .panel-title:hover, .panel-title:focus {
+    border-color:#2AC4EA;
+}
+.btn-link, .pricing-table-content.pricing-recommanded .pricing-title:before{
+	color:#2AC4EA;
+}
+/*.progress {
+	background-color:rgba( 42,196,234,0.2 );
+}*/
+.throbbers_loader .throbber:after{
+	border-top-color: #2AC4EA;
+	border-left-color: #2AC4EA;
+	opacity: 1;
+}
+.heading-strike:before, .heading-crossed:after{
+	opacity:0.4;
+}
+
+
+/* Default color */
+body, pre, .btn:hover, .btn:focus, .btn.focus, .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-white, .btn-default.btn-alt, .btn-white.btn-alt:hover, .btn-white.btn-alt:focus {
+	color:#333333;
+}
+.btn-default, .btn-default.btn-alt:hover, .btn-default.btn-alt:focus{
+	background-color:#333333;
+}
+.btn-default{
+	border-color:#333333;
+}
+
+/* Heading color */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .text-primary, a.text-primary:hover, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.btn-alt, .pricing-cost {
+	color:#000000;
+}
+
+.btn-primary, .btn-primary.btn-alt:hover, .btn-primary.btn-alt:focus {
+	background-color:#000000;
+}
+.btn-primary {
+	border-color:#000000;
+}
+
+.btn-alt, .btn-alt:hover, .btn-alt:focus{
+	background-color:transparent;
+}
+/* section icon color */
+section i{
+	color:#000000; /* keep it seperate*/
+}
+
+/* background */
+.bg-primary, a.bg-primary:hover{
+	background-color:#000000;
+}

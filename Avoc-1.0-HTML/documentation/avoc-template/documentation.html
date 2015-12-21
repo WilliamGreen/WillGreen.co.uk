@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Avoc HTML Template Documentation</title>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+</head>
+
+<body>
+<div id="page">
+
+	<div class="wrapper clearfix">
+	
+    	<div id="sidebar" class="right_float">
+        	<h3><strong>Table of Contents</strong></h3>
+            
+            <ul id="mainnav">
+				<li><a href="#preface"><strong>Preface</strong></a></li>
+            	<li><a href="#generalrules"><strong>General Css Elements</strong></a></li>
+            	<li><a href="#htmlstructure"><strong>HTML Structure</strong></a></li>
+            	<li><a href="#fonts"><strong>Fonts / Text</strong></a></li>
+            	<li><a href="#preloader"><strong>Preloader / Pagelaoder</strong></a></li>
+            	<li><a href="#header"><strong>Header</strong></a></li>
+                <li><a href="#logo"><strong>Logo</strong></a></li>
+            	<li><a href="#menu"><strong>Menu / Navigation</strong></a></li>
+            	<li><a href="#footer"><strong>Footer</strong></a></li>
+            	<li><a href="#hero"><strong>Hero / Page Title</strong></a></li>
+            	<li><a href="#slider"><strong>Slider</strong></a></li>
+            	<li><a href="#portfolio"><strong>Portfolio</strong></a></li>
+            	<li><a href="#blog"><strong>Blog</strong></a></li>
+            	<li><a href="#horizontalsection"><strong>Horizontal Section</strong></a></li>
+            	<li><a href="#parallax"><strong>Parallax Background</strong></a></li>
+            	<li><a href="#videos"><strong>Videos</strong></a></li>
+            	<li><a href="#contact"><strong>Contact Form</strong></a></li>
+            	<li><a href="#map"><strong>Google Map</strong></a></li>
+            	<li><a href="#elements"><strong>Elements / Shortcodes</strong></a></li>
+            	<li><a href="#css"><strong>Css Files</strong></a></li>
+            	<li><a href="#javascript"><strong>Javascript</strong></a></li>
+            	<li><a href="#ressources"><strong>Ressources</strong></a></li>
+            </ul>
+        </div>
+    
+    
+        <div id="content" class="left_float">
+        	<h1><strong>Avoc HTML Template Documentation</strong></h1>
+            
+            <div id="preface" class="section">
+            	<h2 class="sectiontitle"><strong>Thanks</strong></h2>
+                <p>
+                First of all, a big thanks for purchasing this template.  This document includes a guide and general information about the template.
+                </p>
+            </div>
+            
+            <div id="support" class="section">
+            	<h2 class="sectiontitle"><strong>Support</strong></h2>
+                <p>
+                Please read the documentation before seeking support.  If you have any questions that are beyond the scope of this document you can still contact me by using the contact form on the themeforest profil page. <a href="http://themeforest.net/user/SpabRice">SpabRice</a>.  Please enter the name of the item you've bought in the textmessage.<br />
+                <strong>Do not use the comment section on the themeforest item page.  This will slow down the support process</strong>
+                </p>
+                <p class="attention">
+                <strong>Important</strong>: Theme support does not include any sort of customizations for you or your client.</strong>
+                </p>
+            </div>
+            
+            
+          <div id="introduction" class="section">
+           	<h2 class="sectiontitle"><strong>Introduction</strong></h2>
+            	<p>
+            	You bought an HTML / CSS template, so you need some basic knowledge for those 2 languages.  The Best way is to play around with the different elements but you'll find some helpfull tips and explanations how this template is build up and works. <br>
+				<b>Please compare all the explanation from this documentation with the original files to have a better understanding.</b>
+            	</p>
+          </div>
+		  
+		  <!--
+          <div id="tutorials" class="section">
+            	<h4 class="sectiontitle"><strong>Video Tutorials</strong></h4>
+					<p>
+						Take a look at the video tutorials.
+					</p>
+                	<ul>
+						<li><a href="http://www.youtube.com/watch?v=Ue_JTSc7Mpk" target="_blank"><strong>Border Options</strong></a></li>
+						<li><a href="http://www.youtube.com/watch?v=Qdb1Y_Tj8mY" target="_blank"><strong>Header Options</strong></a></li>
+						<li><a href="http://www.youtube.com/watch?v=WwLSv7RFCbs" target="_blank"><strong>Portfolio/Blog Options</strong></a></li>
+					</ul>
+         	</div>
+          -->
+          
+          <div id="generalrules" class="section">
+           	<h2 class="sectiontitle"><strong>General Css Elements</strong></h2>
+            	<p>
+            	These are general classes, id's or tags which you will find frequently in almost all html files.
+            	</p>
+            	<p><strong>#page-content:</strong> you will find this element on every page. It contains all main content (header,page-body,footer)</p>
+            	<p><strong>#page-body:</strong> this element is also needed for all pages. It contains the main content</p>
+				<p><strong>.wrapper:</strong> it wrapps the element to a the main content width. (1080px = default / 960px for smaller screens / 780px for tablet).</p>
+				<p><strong>.wrapper-small:</strong> same use than .wrapper but with smaller sizes. (780px).</p>
+				<p><strong>.wrapper-mini:</strong> another wrapper with a mini size. (400px).</p>
+            	<p><strong>.left-float:</strong> use this classname for any element you want to float to the left.</p>
+            	<p><strong>.right-float:</strong> use this classname for any element you want to float to the right.</p>
+            	<p><strong>.clearfix:</strong> for all elements which contains any floating element.</p>
+            	<p><strong>.align-center:</strong> use this class if you want to align the text for a whole section or just an element.</p>
+            	<p><strong>.text-light:</strong> this class is needed if you use a darker background for a section (for example a dark parallax section)</p>
+            	<p><strong>.colored:</strong> use this class for text elements you want to add the default color</p>
+		</div>
+          
+		<div id="htmlstructure" class="section">
+			<h2 class="sectiontitle"><strong>HTML Structure</strong></h2>
+		   	<p>
+			Here's the basic html structure.
+			</p>
+<p><pre>
+...
+&lt;body>
+  &lt;div id="page-content"&gt;
+
+  &lt;header&gt;
+  &lt;/header&gt;
+	
+  &lt;section id="hero"&gt;
+  &lt;/section&gt;
+  
+  &lt;section id="page-body"&gt;
+  &lt;/section&gt;
+	
+  &lt;footer&gt;
+  &lt;/footer&gt;
+	
+ &lt;/div&gt;
+&lt;/body&gt;
+...
+</pre></p>
+		<p>
+		You're of course not forced to use all of the section (example: in the 404 page only header and hero is used). But if you do so, please use the structure like above with the right id's.
+		</p>
+        <p class="attention">
+        	The <strong>#page-body</strong> has a top padding by default to separate it from the hero and not to be sticky to it.
+            In some cases you may want to delete this margin, use the class <strong>nopadding</strong>. <em>(see general-elements.html)</em>
+        </p>
+		</div>
+		  
+		  		  
+		<div id="fonts" class="section">
+			<h2 class="sectiontitle"><strong>Fonts / Text</strong></h2>
+            <p>
+            	This tempalte uses 4 different fonts (with different weights) comming from the google font library.
+            </p>
+            <ul>
+            	<li><strong>Montserrat</strong> for all main headings / titles</li>
+            	<li><strong>Josefin Sans</strong> for all subtitles and other misc informations (copyright,blockquote,blog-date,etc.)</li>
+            	<li><strong>Maven Pro</strong> for the menu and all links/buttons linked to some "action" (pagination,open filter,etc.)</li>
+            	<li><strong>Lato</strong> for the text paragraphs</li>
+            </ul>
+            <p>Include the fonts in every html you use/create.  Make sure to include them in the head before the css files.</p>
+			<p><pre>
+&lt;!-- FONTS -->
+&lt;link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" ...>
+&lt;link href="http://fonts.googleapis.com/css?family=Maven+Pro:400,700,900" ...>
+&lt;link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900" ...>
+&lt;link href="http://fonts.googleapis.com/css?family=Josefin+Sans:400,700" ...>
+&lt;!-- FONTS -->
+</pre></p>
+			<p>
+			When using one of the fonts in the css always add the weight you want to use.
+			</p>
+			<p><pre>
+h1 {
+ font-family: 'Montserrat'; 
+ font-weight: 400;
+ ...
+}
+
+h1 strong { 
+ font-weight: 700; 
+}</pre></p>
+			<br><br>
+            <h4><strong>Headings (Titles)</strong></h4>
+			<p>
+				By default the headings (h1,h2,h3,h4,h5,h6) Uses the main heading font "Montserrat" and all letters are uppercase.
+            </p>
+            <p>
+            	By adding the class <strong>alttitle</strong> the title will show the font Josefin Sans.
+            </p>
+			<p><pre>
+&lt;h3 class="alttitle "&gt;Your Title&lt;/h3>
+</pre></p>
+			<br><br>
+            <h4><strong>Changing fonts</strong></h4>
+			<p>
+				To change a font choose another Webfont from the Google Font library or use other sources.<br>
+				You have to go through the syle.css and change all selectors where I assigned the font.
+            </p>
+            <p>
+				<b>Tip</b>: use the search/replace function (Mac = cmd+f / Win = ctrl+f) which almost every editor got.
+			</p>
+		</div>
+        
+        
+        <div id="preloader" class="section">
+			<h2 class="sectiontitle"><strong>Preloader / Pageloader</strong></h2>
+			<p>
+				You will find the html markup of the page loader in all html pages (except 404 page).  
+                This will hide the content with a white loading screen until the page is loaded.  The black top loading bar is comming from the pace script. (see below)
+			</p>
+			<pre>
+&lt;!-- PAGELOADER -->
+&lt;div id="page-loader">
+ &lt;div class="page-loader-inner">
+  &lt;div class="loader">&lt;strong>Loading&lt;/strong>&lt;/div>
+ &lt;/div>
+&lt;/div>
+&lt;!-- PAGELOADER --></pre>
+			<p>
+			<br>
+			<p>
+			The loader bar is done by the pace script/plugin.  So make sure to have this script included if you want to show the loader.
+			</p>
+			<pre>
+&lt;script type='text/javascript' src='files/js/jquery.pace.js'>&lt;/script></pre>
+			</p>
+		
+			<br><br>
+            <h4><strong>Disabling Pageloader</strong></h4>
+			<p>
+            	You can of course disable the page loader as done in the 404 page.  To do so, just delete the pageloader html markup from the code and delete the script includer of the pace script.
+            </p>
+		</div>
+        
+        
+        <div id="header" class="section">
+			<h2 class="sectiontitle"><strong>Header</strong></h2>
+			<p>
+				See the default markup for the header below.
+			</p>
+			<pre>
+&lt;!-- HEADER -->
+&lt;header id="header">        
+ &lt;div class="header-inner clearfix">
+  
+   &lt;div id="logo" class="left-float">
+    &lt;a id="dark-logo" class="logotype" href="index.html">
+     &lt;img src="files/uploads/logo-avoc-dark.png" alt="Logo">&lt;/a>
+	 
+    &lt;a id="light-logo" class="logotype" href="index.html">
+     &lt;img src="files/uploads/logo-avoc-light.png" alt="Logo">&lt;/a>
+   &lt;/div>
+  
+   &lt;div class="menu right-float clearfix">
+    &lt;a href="#" class="open-nav">&lt;span class="hamburger">&lt;/span>&lt;span class="text">Menu&lt;/span>&lt;/a>
+    
+    &lt;nav id="main-nav">
+     ...
+    &lt;/nav>
+   &lt;/div>
+  
+ &lt;/div>
+&lt;/header>
+&lt;!-- HEADER --></pre>
+			<p>	
+            	See <a href="#logo"><strong>Logo</strong></a> for more information about the logo.<br>
+            	See <a href="#menu"><strong>Menu</strong></a> for more information about the menu.
+            </p>
+			<br><br>
+            <h4><strong>Header Options</strong></h4>
+			<p>
+				By default the header will have an hamburger icon which needs to be clicked to open the menu.<br>
+				<img src="assets/header-default.jpg">
+			</p>
+			<p>After clicking the Menu button the menu will open on a white background.
+				<img src="assets/header-open.jpg">
+			</p>
+            <p>This is the default behavior of the menu / header. If you would like to have the menu items visible on page load, just add the class header-open to the header tag.
+            <pre>
+&lt;header id="header" class="<strong>header-open</strong>"> </pre>
+            </p>
+		   <br>
+		   <p>
+		   		Another option is the transparent header.  As I mentioned above, when the menu items are shown, the header has a white background.  <br>By adding the class <strong>header-transparent</strong> the header will stay transparent.
+		   <pre>
+&lt;header id="header" class="<strong>header-transparent</strong>"></pre><br>
+				<img src="assets/header-open-on-start.jpg">
+</p>
+			<br><br>
+		   <h4><strong>Disabling fixed / sticky</strong></h4>
+		   <p>
+		   		The header will have a fixed position by default. Which means that although the visitor is scrolling, it will always be visible on top of the page.
+           </p>
+           <p>
+           		Add non-fixed to the class and the header will have a static position.
+				<pre>
+&lt;header id="header" class="<strong>non-fixed</strong>"></pre></p>
+	<!--	   
+	<a href="https://www.youtube.com/watch?v=Qdb1Y_Tj8mY" target="_blank" class="video-tutorial"><span class="icon"></span><span class="text">Video Tutorial</span></a>-->
+	  	</div>
+        
+        
+        
+        <div id="logo" class="section">
+			<h2 class="sectiontitle"><strong>Logo</strong></h2>
+			<p><pre>
+   ...
+   &lt;div id="logo" class="left-float">
+    &lt;a id="dark-logo" class="logotype" href="index.html">
+     &lt;img src="<strong>files/uploads/avoc-logo-light.png</strong>" alt="Logo">&lt;/a>
+	 
+    &lt;a id="light-logo" class="logotype" href="index.html">
+     &lt;img src="<strong>files/uploads/avoc-logo.png</strong>" alt="Logo">&lt;/a>
+   &lt;/div>
+   ...</pre></p>
+			<p>Always use/place 2 logos (dark-logo + light-logo) with the same pixel dimensions.  The light logo will be shown if your hero background is dark.</p>
+            <p>If this is case, use the class <strong>show-light-logo</strong>.  This will show the light logo on page load.
+            <pre>
+&lt;div id="logo" class="left-float <strong>show-light-logo</strong>"></pre></p>
+			<p>As done in pages index-agency.html,services.html,...</p>
+            <br><br>
+            <h4><strong>Change the css</strong></h4>
+            <p class="attention red"><strong>Attention</strong>: Depending on your logo height you need to adapt the style.css.  Open the style.css and scroll to the bottom.  Adapt the values depending on your logo height.</p>
+			<p>
+				For example, the logo I've used has a height of 30px.
+			</p>
+<pre>
+<em>/* your logo height */</em>
+header #logo { height: <strong class="red">30px</strong>; }
+.open-nav { height: <strong class="red">30px</strong>; }
+.open-nav .text { line-height: <strong class="red">30px</strong>; }
+nav#main-nav ul li > a { line-height: <strong class="red">30px</strong>; }
+
+<em>/* logo height + header-inner margin (30px + 2*60px) */</em>
+#page-body { padding-top: <strong class="red">150px</strong>; }
+header:after { top: <strong class="red">-150px</strong>; height: <strong class="red">150px</strong>; }	
+header.header-open:not(.header-transparent) + #hero, header.header-open:not(.header-transparent) + #page-body { margin-top: <strong class="red">150px</strong>; }
+#header-filter, #header-share { top: <strong class="red">-150px</strong>; min-height: <strong class="red">150px</strong>; }
+@media only screen and (max-width: 1024px) { nav#main-nav { top: <strong class="red">150px</strong> !important; } }
+</pre>
+			<br><br>
+            <h4><strong>Making the logo retina ready</strong></h4>
+            <p>
+            	To make your logo <em>(any kind of image)</em> ready for retina devices you just need to have 2 image files for each logo <em>(image)</em> 
+            </p>
+            <ul>
+            	<li><strong>One with the normal size</strong> (ex. 130px * 30px)</li>
+            	<li><strong>and the second with the doubled size</strong> (ex. 260px * 60px)</li>
+            </ul>
+            <p>
+            	Now you just need to tell the html that it should include the doubled size for retina devices by using the srcset attribute.
+                <pre>
+&lt;img src="logo.png" srcset="logo.png 1x, logo@2x.png 2x"></pre>
+            </p>
+            <p>
+            	Please have also a look at the world wide web for more information about the srcset attribute.
+            </p>
+	  	</div>	
+			
+			
+          
+		<div id="menu" class="section">
+			<h2 class="sectiontitle"><strong>Menu / Navigation</strong></h2>
+			<p>
+				Please use the following markup for the main navigation.
+			</p>
+            <pre>
+&lt;div class="menu right-float clearfix">
+ &lt;a href="#" class="open-nav">&lt;span class="hamburger">&lt;/span>&lt;span class="text">Menu&lt;/span>&lt;/a>
+ 
+ &lt;nav id="main-nav"&gt;
+   &lt;ul&gt;
+      &lt;li class=&quot;current-menu-item&quot;&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;li&gt;
+      &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;
+         &lt;ul class=&quot;sub-menu&quot;&gt;
+            &lt;li&gt;&lt;a href="about.html"&gt;Pages&lt;/li&gt;
+            &lt;li&gt;&lt;a href="about-creative.html"&gt;About creative&lt;/li&gt;
+            ...
+         &lt;/ul&gt;
+	  ...
+      &lt;li>&lt;a href="contact.html">Contact&lt;/a>
+      &lt;li&gt;
+   &lt;/ul&gt;
+ &lt;/nav&gt;</pre>
+			<p>
+				<b>class="current-menu-item"</b>: add this classname to the actual li element of the page.  In the contact.html for example it would be added to this li.
+			</p>
+            
+            <br><br>
+            <h4><strong>Changing color</strong></h4>
+			<p>The menu (idem as the logo) has a dark style by default. If you use a dark background for your hero section and you would like to have the menu light just add the class <strong>menu-light</strong>. 
+            <pre>
+&lt;div class="menu right-float clearfix <strong>menu-light</strong>"></pre></p>
+       	</div>
+		
+        
+        
+        <div id="footer" class="section">
+			<h2 class="sectiontitle"><strong>Footer</strong></h2>
+            <br>
+            <h4><strong>Dark Footer</strong></h4>
+            <p>The footer has a centered positioning and a light grey background by default.  Choose a dark footer by just adding the class <strong>footer-dark text-light</strong> to the footer tag
+            <pre>&lt;footer class="<strong>footer-dark text-light</strong>"></pre></p>
+            <img src="assets/footer-dark.jpg">
+            <br><br><br>
+            <h4><strong>Footer column</strong></h4>
+            <p>Just use the column elements to have a column layout on the footer.
+            <pre>
+&lt;footer>
+  &lt;div class="footer-inner wrapper">
+  
+    &lt;div class="column-section clearfix">
+      &lt;div class="column one-half">
+      	 ...
+      &lt;/div>
+      &lt;div class="column one-half last-col">
+      	 ...
+      &lt;/div>
+    &lt;/div>
+
+    &lt;a id="backtotop" href="#">Back To Top&lt;/a>
+  &lt;/div>
+&lt;/footer></pre></p>
+            <img src="assets/footer-column.jpg">
+        </div>	
+		 
+		
+		<div id="hero" class="section">
+			<h2 class="sectiontitle"><strong>Hero / Page Title</strong></h2>
+            <p>
+            	The hero section is the first content of your page placed between the header and the page-body section in the html markup.
+            </p>
+            <p>
+            	It usually contains the page title of the page, but can also hold a slider or some other content
+            </p>
+            <p><pre>
+...
+&lt;/header&gt;
+	
+&lt;section id="hero"&gt;
+ &lt;div class="page-title">
+ 	...
+ &lt;/div>
+&lt;/section&gt;
+
+&lt;section id="page-body"&gt;
+...
+</pre></p>
+			<p>
+            
+            </p>
+			<p class="attention">
+				The page-title element is used for all pages which doesn't use a fullwidth slider on first element.<br>
+                See <a href="#slider"><strong>Slider</strong></a> to see how to include the slider<br>
+                See <a href="#parallax"><strong>Parallax Background</strong></a> to see how to add a parallax background to the hero section.<br>
+                See <a href="#videos"><strong>Videos</strong></a> to see how to add a background video to the hero section.
+			</p>
+			<p>
+				<strong><em>The page-title section can contain any type of content but usually there is one or multiple "heading" included.</em></strong>
+			</p>
+			<pre>
+...			
+			
+&lt;section id="hero" class="hero-big">
+ &lt;div class="page-title">
+  &lt;h1>&lt;strong>About&lt;/strong>&lt;/h1>
+ &lt;/div>
+&lt;/section&gt;
+
+...</pre>
+			<br><br><br>
+            <h4><strong>Hero Size</strong></h4>
+            <br>
+            <div class="clearfix">
+                <div class="one-left">
+                    <p>Add the class <strong>hero-full</strong> and it will cover 100% of the window height
+                    <pre>&lt;section id="hero" class="hero-full"></pre></p>
+                    <img src="assets/hero-option-full.png">
+                </div>
+                <div class="one-right">
+                    <p>Add the class <strong>hero-big</strong> and it will cover 80% of the window height
+                    <pre>&lt;section id="hero" class="hero-big"></pre></p>
+                    <img src="assets/hero-option-big.png">
+                </div>
+            </div>
+            
+            <br><br>
+            
+            <div class="clearfix">
+                <div class="one-left">
+                    <p>Add the class <strong>hero-half</strong> and it will cover 50% of the window height
+                    <pre>&lt;section id="hero" class="hero-half"></pre></p>
+                    <img src="assets/hero-option-half.png">
+                </div>
+                <div class="one-right">
+                    <p>Add the class <strong>hero-auto</strong> and the section will automatically adapt to its content
+                    <pre>&lt;section id="hero" class="hero-auto"></pre></p>
+                    <img src="assets/hero-option-auto.png">
+                </div>
+            </div>
+            <br>
+            <p class="attention">
+				For <strong>hero-full</strong>,<strong>hero-big</strong> and <strong>hero-half</strong> the page-title has an absolute positioning. This means if your content is taller than the height of your hero section the content is cutted and not 100% visible.  So make sure not to use too much content, this could lead to some issues especially in small devices.<br><br>
+                For <strong>hero-auto</strong> all is fine, and you can add as much content as you want because it adapts to its content.
+			</p>
+            
+            <br><br><br>
+            <h4><strong>Page title position</strong></h4>
+            <p>As mentioned above, the title positioning has only impact if you choose hero-full,hero-big or hero-half.</p>
+            <p>By default the positioning of the page title is centered but you can change the position by adding some classes to the page title element. <em>(as done in the blog-single-1.html for example)</em></p>
+            <ul>
+            	<li><strong>hleft / hright</strong>: this will change the horizontal position to left or right</li>
+            	<li><strong>vtop / vbottom</strong>: this will change the vertical position to top or bottom</li>
+            </ul>
+			
+		</div>
+
+				
+          
+          <div id="slider" class="section">
+           	<h2 class="sectiontitle"><strong>Slider</strong></h2>
+				<p>
+				This template uses the owl carousel script for all sliders, so make sure to have inlcuded the javascript and css file of the owl script in the pages where you want to have a slider.</p>
+                <p>
+                Here's the default markup for a slider. 
+				</p>
+            
+            <pre>
+&lt;div class="owl-slider">
+  &lt;div>&lt;img src="files/uploads/image-1.jpg" />&lt;/div>
+  &lt;div>&lt;img src="files/uploads/image-2.jpg" />&lt;/div>
+&lt;/div></pre>
+			<p>
+            You will find the script initialiser in the script.js at line +-130.
+            </p>
+			<pre>
+jQuery(".owl-slider").owlCarousel({
+    items:1,
+    stopOnHover : true,
+    nav: true,
+    navText:false,
+    dots: false,
+    smartSpeed : 800,			
+    singleItem : true,
+    autoHeight : true,
+    loop: false,
+    autoplay: false,
+    navRewind: false
+});</pre>
+			<br><br><br>
+			<h4><strong>Hero Slider</strong></h4>
+            <p>If you want to place a slider in the hero section it needs a slightly different markup in order to make it full width. <em>(see index.html for example)</em></p>
+			<pre>
+&lt;section id="hero" class="hero-big">
+
+  <strong>&lt;div class="owl-slider hero-slider" data-autoplay="true">
+  
+    &lt;div class="slider-item" style="background-image:url(files/uploads/slider-image.jpg);">
+      &lt;div class="owl-slider-caption">
+        &lt;h1>&lt;strong>Kaffe & Co&lt;/strong>&lt;/h1>
+        &lt;h5 class="alttitle">Branding&lt;/h5>
+      &lt;/div>
+    &lt;/div>
+    
+    ...
+            
+  &lt;/div> &lt;!-- END .owl-slider --></strong>
+  
+&lt;/section></pre>
+			<p>
+            Instead of adding an &lt;img sr="..."> tag add the image as background image in order to automatically adapt.
+            </p>
+            
+            <br><br>
+            <h4><strong>Switching logo / menu color</strong></h4>
+            <p>Add the class <strong>text-light</strong> the the slider-items you want a light text color.  Thanks to this the logo and menu will also change appearence.<pre>
+&lt;div class="slider-item text-light" style="background-image:url(slider-image.jpg);">
+  &lt;div class="owl-slider-caption">
+    &lt;h1>&lt;strong>Still Life&lt;/strong>&lt;/h1>
+    &lt;h5 class="alttitle">Photgraphy&lt;/h5>
+  &lt;/div>
+&lt;/div></pre></p>
+            
+            <br><br>
+            <h4><strong>Slider captions</strong></h4>
+            <p>
+            Additionally you can add caption for the hero slider by just adding the owl-slider-caption element. By default it has a center positionbut as same as the page-title you can change the positioning by using the classes <strong>hlef / hright</strong> and <strong>vtop / vbottom</strong>
+            </p>
+			<pre>
+&lt;div class="owl-slider-caption <strong>hleft vbottom</strong>">
+  &lt;h1>&lt;strong>Kaffe & Co&lt;/strong>&lt;/h1>
+  &lt;h5 class="alttitle">Branding&lt;/h5>
+&lt;/div></pre>
+			
+          </div>
+          
+          
+          <div id="portfolio" class="section">
+          		<h2 class="sectiontitle"><strong>Portfolio</strong></h2>
+                <p>
+                	The portfolio in the key element of this template.  It uses the awsome <strong>wolf parallax</strong> script (index.html) and the <strong>isotope</strong> script (index-masonry.html) for a masonry layout.
+                </p>
+                <br><br><br>
+                <h4><strong>Wolf Parallax</strong></h4>
+                <p>
+                	I really recommend to have a look at the wolf documentation to have detailed information how this script works.
+                </p>
+                <p>
+                	All I added to the default appearence of the script is the hover effect of the portfolio items <em>(style.css at line +-1050)</em> and the caption styling <em>(index-creative.html)</em>.
+                </p>
+                <p>
+                	In the index-creative.html you will see that I used inline css to style the captions appearence.
+                <pre>
+&lt;div class="wolf-caption portfolio-caption">                
+ &lt;a href="#" class="wolf-caption-link" <strong>style="background: #aa88b6; padding: 20px;"</strong>>
+  &lt;h6 class="alttitle portfolio-category" <strong>style="color: #fff;"</strong>>Photography&lt;/h6>
+  &lt;h4 class="portfolio-name" <strong>style="color: #fff;"</strong>>&lt;strong>The Efimer&lt;/strong>&lt;/h4>
+ &lt;/div>
+&lt;/a></pre></p>
+				<p>
+                Personally I'm not a friend of inline css, and I always recommend to put css in some css file, but in this case it might be easier to do so, otherwhise you would need to add a class for each caption element.
+                </p>
+                <p class="attention">
+                	As mentioned above, for all other information about the script please have a look at the wolf documentation.
+                </p>
+                
+                <br><br><br>
+                <h4><strong>Isotope (masonry)</strong></h4>
+            	<p>
+            	The isotope script is used for the masonry layout used for Portfolio and Blog layout.  Create as much items as you wants, here's the default markup.
+            	</p> 
+            
+            <p><pre>
+&lt;div id=&quot;GRID-ID&quot; class=&quot;masonry clearfix&quot; data-maxitemwidth="600"&gt;
+   
+ &lt;div class="masonry-item <strong>branding</strong>">
+ ...
+ &lt;/div> &lt;!-- END .masonry-item -->
+   
+ ...
+
+&lt;/div&gt; &lt;!-- END #GRID-ID --&gt;</pre>
+			<p><strong>Details</strong></p>
+            <ul>
+            	<li><span class="accent">#GRID-ID</span> -> you can customize this name, make sure to use the same name in the filter option if used (see below).</li>
+            	<li><span class="accent">.data-maxitemwidth</span> -> This handles the itemwidth. as higher the value as bigger the thumbnails.  This also depends on the screen size.  If you use for example '600' make sure that your images has also this width because in some cases the tiles could have this width size.</li>
+            	<li><span class="accent">.branding</span> -> This is the name for the filter attribute</li>
+            </ul>
+            <p>
+            The Masonry will automatically adapt to the width of the parent container.
+            </p>
+				<p>
+				For more options please take a look at the index-masonry.html
+				</p>
+				<br><br><br>
+            	<h4><strong>Filter</strong></h4>
+                <p>
+                	The filter is placed in the header but you could also place it in some other area.  It is part of the wolf parallax or isotope script dependingly which one you're using.
+                </p>
+                <p>
+                	If you're using the header filter place the button to open the filter just below the nav element
+                    <pre>
+...
+&lt;/nav>
+
+<strong>&lt;a href="" class="open-filter" data-related-grid="portfolio-grid">Filter&lt;/a></strong>
+...</pre>
+                </p>
+                <p>Now put the header-filter into the header-inner element. The html for both (wolf + isotope) is the same with one exception: the classname of the ul.  use <strong>wolf-filter or masonry-filter</strong> dependingly which one you're using.
+                <pre>
+                
+  &lt;div id="header-filter">
+    &lt;div class="filter-inner align-center">
+      &lt;a href="" class="close-filter">Close&lt;/a>
+      &lt;h5 class="title-filter">&lt;strong>Filter&lt;/strong>&lt;/h5>
+      &lt;ul id="portfolio-filter" class="filter <strong>wolf-filter</strong> clearfix" data-related-grid="portfolio-grid">
+        &lt;li>&lt;a class="active" href="#" data-filter-value="*">All&lt;/a></li>
+        &lt;li>&lt;a data-filter-value=".branding" href="#" title="Branding">Branding&lt;/a></li>
+        &lt;li>&lt;a data-filter-value=".print" href="#" title="Print">Print&lt;/a></li>
+        &lt;li>&lt;a data-filter-value=".photography" href="#" title="Print">Photography&lt;/a></li>
+      &lt;/ul>
+    &lt;/div>
+  &lt;/div>
+   
+&lt;/div> &lt;!-- END .header-inner --&lt;</pre></p>
+			<p>
+            All filter anchors needs a <span class="accent">data-option-value</span> attribute with the correct filter name (example: .branding) 
+            </p>
+            <p class="important">
+                It's important that the value of <b>data-related-grid</b> is the same than the id name of the grid.
+            </p>
+          </div>
+          
+          
+          <div id="blog" class="section">
+          		<h2 class="sectiontitle"><strong>Blog</strong></h2>
+                <p>The blog layout is also done with the isotope script.</p>
+          </div>
+          
+          
+          <div id="horizontalsection" class="section">
+          		<h2 class="sectiontitle"><strong>Horizontal Section</strong></h2>
+                <p>A horizontalsection is a fullwidth section which have some sort of background (color,image,video,etc.) to seperate some specific content from default content. <em>(see index-agency.html)</em></p>
+                <p class="attention">A horizontal section <strong class="red">MUST NOT</strong> be placed into a wrapper element in order to take the full width!
+				</p>
+				<pre>
+&lt;div class="horizontalsection">
+ &lt;div class="horizontalinner wrapper">
+  ...
+ &lt;/div>
+&lt;/div></pre>
+				<p>Use the markup above.  You see that the horizontalsection element is always followed by a horizontalinner.  This is important.  The horizontalsection has nor margin-top or margin-bottom because you could make use of another horizontalsection just below another and a margin wouldn't look good.  If you want a spacing between section, use a spacer element.</p> 
+          </div>
+          
+          
+          <div id="parallax" class="section">
+          		<h2 class="sectiontitle"><strong>Parallax Backgrounds</strong></h2>
+				<p>
+				You could add a parallax image to every element but usually it's used for the <a href="#hero">Hero Section</a> or an <a href="#horizontalsection">Horizontal Section</a> element. <br><em>(see index-agency.html)</em>
+				</p>
+				<p>
+				Add the classname "parallax-section" (and optionally 'text-light' if you use a dark background), the "data-parallax-image".
+				</p>
+				<pre>
+&lt;div class="horizontalsection text-light <strong>parallax-section</strong>" 
+  <strong>data-parallax-image="files/uploads/parallaxbg.jpg"</strong>></pre>
+				<p>
+					<strong>For the hero section it would be added to the #hero element</strong>
+                    <pre>&lt;section id="hero" class="hero-big parallax-section" 
+data-parallax-image="files/uploads/hero-about.jpg"></pre>
+				</p>
+			</div>
+	
+          
+		  
+		  	<div id="videos" class="section">
+          		<h2 class="sectiontitle"><strong>Videos</strong></h2>
+                <p>You have 4 possibilities to add videos to your pages.</p>
+                <ol>
+                	<li><strong>Classic integration</strong> by iframe code</li>
+                	<li><strong>Inline video</strong> with image placeholder</li>
+                	<li><strong>Lightbox video</strong> open with an anchor tag</li>
+                	<li><strong>Background videos</strong> for hero section or horizontal fullwidth sections</li>
+                </ol>
+                
+                <br><br><br>
+                <h4><strong>Classic integration</strong></h4>
+                <p>Just go to your video site (youtube, vimeo or others) and search for the <strong>embedding iframe code</strong> and just put it on your page where you want.</p><p>Example for a youtube video.
+                <pre>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/9dgSa4wmMzk" 
+frameborder="0" allowfullscreen></iframe></pre></p>
+				
+                <p class="attention">
+                	For responsive reasons, make sure to include the javascript <strong>jquery.fitvids.min.js</strong>.  This will automatically adapt the video (iframe) to it parent container.
+                </p>
+                
+                <br><br><br>
+                <h4><strong>Inline video</strong></h4>
+                <p>An inline video will first show a placeholder image with a play button, and when this button is clicked it will load and play the video. <em>(see general-elements.html)</em></p>
+                <p>Inline videos are only possible for youtube + vimeo videos.  The video will automatically adapt to the size of the inline-element so you might have black border on the top/bottom or left/right</p>
+                <p>Add a new div element with class inline-video and add the different data options.</p>
+                <pre>
+&lt;div class="inline-video" data-type="youtube" data-videoid="9dgSa4wmMzk" data-button="Youtube Video">
+  &lt;img src="files/uploads/video-placeholder.jpg" alt="SEO NAME">
+&lt;/div></pre>
+				<ul>
+                	<li><strong>data-type</strong>: youtube or vimeo</li>
+                	<li><strong>data-videoid</strong>: add the id of the youtube or vimeo video</li>
+                	<li><strong>data-button (optional)</strong>: optionally add a text which will added to the button</li>
+                </ul>
+                
+                <br><br><br>
+                <h4><strong>Lightbox Video</strong></h4>
+                <p>If using a lighbox video make sure to inlcude the javascript jquery.lightcase.min.js script and related css.</p>
+                <p>Add an anchor tag with the data-rel attribute lightcase</p>
+                <pre>
+&lt;a href="http://www.youtube.com/embed/9dgSa4wmMzk" data-rel="lightcase">Youtube Video&lt;/a>
+&lt;a href="http://player.vimeo.com/video/110894499" data-rel="lightcase">Vimeo Video&lt;/a>
+&lt;a href="files/uploads/video.mp4" data-rel="lightcase">Slefhosted Video&lt;/a></pre>
+                <p class="attention">
+                	<strong>For youtube + vimeo videos you MUST use the embed link.</strong><br>
+                    <strong>Youtube</strong>: http://www.youtube.com/embed/<strong>YOUTUBE-ID</strong><br>
+                    <strong>Vimeo</strong>: http://player.vimeo.com/video/<strong>VIMEO-ID</strong>
+                </p>
+                <p>You may adapt the width / height values on the script initialiser atline +- 210 in the script.js</p>
+                
+                <br><br><br>
+          		<h4><strong>Background Video</strong></h4>
+				<p>
+				In fact you can add a background video to every kind of element but I usually do it in the <a href="#hero">Hero Section</a> or an <a href="#horizontalsection">Horizontal Section</a> element.<br><em>(see index-agency.html)</em>
+				</p>
+				<p>
+				<strong>Make sure to provide your video in 3 different formats:</strong>
+				</p>
+				<ul>
+					<li>mp4</li>
+					<li>webm</li>
+					<li>ogg</li>
+				</ul>
+				<p>
+				Add the classname <strong>"videobg-section"</strong> (and optionally 'text-light' if you use a dark video) to the element, and fill in the different <strong>"data-"</strong> options.
+				</p>
+				<pre>
+&lt;div class="horizontalsection text-light <strong>videobg-section</strong>"
+ <strong>data-videofile="files/uploads/coffee" 
+ data-videowidth="1280"
+ data-videoheight="720"
+ data-videoposter="files/uploads/poster-image.jpg"
+ data-videoparallax="false"
+ data-videooverlaycolor="#000000"
+ data-videooverlayopacity="0.5"
+ data-sound="true"</strong>></pre>
+ 				<ul>
+					<li><b>data-videofile</b> -> please add the path to your files <strong>without the file ending</strong> (ie: .mp4)</li>
+					<li><b>data-videowidth + data-videoheight</b> -> very important that you enter the right values</li>
+					<li><b>data-videoposter</b> -> this poster is shown for devices which don't support background videos</li>
+					<li><b>data-videoparallax</b> -> true or false for a parallax effect</li>
+					<li><b>data-videooverlaycolor</b> -> optional overlay color / leave empty if not wanted</li>
+					<li><b>data-videooverlayopacity</b> -> opacity value for the overlay</li>
+					<li><b>data-sound</b> -> if true, the video also plays the sound with option to mute it manually</li>
+				</ul>
+				
+				<p class="attention">
+				<strong>Note</strong>: If you're uploading your site to a server and the video is not showing in some browsers, this is server related.  Make sure to enable the MIME types.  You can enable them via your xerver settings or via htaccess.
+				</p>
+				<p class="attention">
+				<strong>Note</strong>: Mobile devices like Tablets or Smartphones doesn't support background videos.  In this case the poster image will be displayed. Background videos are only possible with selfhosted videos.
+				</p>
+			</div>
+			
+            
+          <div id="contact" class="section">
+           	<h2 class="sectiontitle"><strong>Contact Form</strong></h2>
+            <p>
+            	Create a new form with all the attributes like below
+            </p> 
+            <pre>
+&lt;form id=&quot;contact-form&quot; class=&quot;checkform&quot; action=&quot;&quot; 
+target=&quot;contact-send.php&quot; method=&quot;post&quot; &gt;</pre>
+            <p>
+				You must at least add 3 form-rows with the <span class="accent">name, email + message</span>.
+				These 3 fields are required for the sending. Take a look at the markup on the contact section of the index.html
+			</p>		
+			<p>	
+            	You can add more fields if wanted.<br>
+				Please add the classname <span class="accent">req</span> to the label if this field is required.<br>
+            </p>
+            <pre>
+&lt;div class=&quot;form-row clearfix&quot;&gt;
+ &lt;label for=&quot;customfield&quot; class=&quot;req&quot;&gt;Message *&lt;/label&gt;
+ &lt;input type=&quot;text&quot; name=&quot;customfield&quot; class=&quot;customfield&quot; 
+ id=&quot;customfield&quot; value=&quot;&quot; placeholder="Custom Field *" /&gt;  
+&lt;/div&gt;</pre>
+			<p>
+            	When adding a new field you also need to add these fieldnames in the hidden field <span class="accent">fields</span> seperated and ending by a ",".<br> Change also the email and the Subject Name.
+            </p>
+            <pre>
+&lt;input type=&quot;hidden&quot; name=&quot;subject&quot; <b>value=&quot;Contact Subject Avoc html&quot;</b> /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;fields&quot; <b>value=&quot;name,email,message,customfield,&quot;</b> /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendto&quot; <b>value=&quot;YOUREMAIL@SERVER.com&quot;</b> /&gt;</pre>
+			<p>
+            	Please add an form-note message at the wanted position.  This message will be displayed if there are any errors/success. 
+            </p>
+            <pre>
+&lt;div id="form-note">
+ &lt;div class="alert alert-error">
+  &lt;h6>&lt;strong>ERROR&lt;/strong>: Please check your entries!&lt;/h6>
+ &lt;/div>
+&lt;/div></pre>
+			<p class="attention">
+            <strong>Note</strong>: If you have good php knowledge you can take a look at the contact-send.php and change it if you want.</p>
+          </div>
+		  
+		  
+		  	<div id="map" class="section">
+           	<h2 class="sectiontitle"><strong>Google Map</strong></h2>
+            <p>
+            	Search first for your longitude and latitude on <a href="http://itouchmap.com/latlong.html" target="_blank">itouchmap.com</a>.<br>
+                Once you got them use this script to add your google map.
+            The map will always take the full width of the parent container. You just need to set up the height vie inline css.</p> 
+            <pre>
+&lt;div id=&quot;map&quot; class=&quot;header-map&quot; style=&quot;height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://maps.google.com/maps/api/js?sensor=false&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt
+   function mapinitialize() {
+      var latlng = new google.maps.LatLng(-33.86938,151.204834);
+      var myOptions = {
+         zoom: 14,
+         center: latlng
+         scrollwheel: true,
+         scaleControl: false,
+         disableDefaultUI: false,
+         mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      
+      var map = new google.maps.Map(document.getElementById(&quot;map&quot;),myOptions);
+      var image = &quot;files/uploads/map-pin.png&quot;;
+      var marker = new google.maps.Marker({
+         map: map,
+         icon: image,
+         position: map.getCenter()
+      });
+      
+      var contentString = '&lt;b&gt;Office&lt;/b&gt;&lt;br&gt;Streetname 13&lt;br&gt;50000 Sydney';
+      var infowindow = new google.maps.InfoWindow({
+         content: contentString
+      });
+      
+      google.maps.event.addListener(marker, 'click', function() {
+         infowindow.open(map,marker);
+      });
+      
+   }
+   mapinitialize();
+&lt;/script&gt;</pre>
+			<p>
+            	Change the map-pin image if you want and the Text for the infobox.
+            </p>
+          </div>
+          
+                    
+          <div id="elements" class="section">
+           	<h2 class="sectiontitle"><strong>Elements / Shortcodes</strong></h2>
+				<br><br>
+            	<h4><strong>Spacer</strong></h4>
+				<p>
+					If you already took a look at the html files you probably met some <strong>"spacer"</strong> elements.  These elements have been created to give you control over some spacings.  <br>For example I used them to add a spacing at the bottom of the last section of the page. 
+				</p>
+				<p>
+				 Just add a div with the classname spacer + the height of the spacer
+				</p>
+				<pre>&lt;div class="spacer spacer-big">&lt;/div></pre>
+				<ul>
+					<li><strong>spacer-big</strong> = 160px</li>
+					<li><strong>spacer-medium</strong> = 120px</li>
+					<li><strong>spacer-small</strong> = 40px</li>
+					<li><strong>spacer-mini</strong> = 20px</li>
+				</ul>
+				
+				<br><br><br>
+            	<h4><strong>Icons</strong></h4>
+				<p>
+					This template uses the icon family <strong>Ionicons</strong> and <strong>Font Awesome</strong>.  You can place the icons just anywhere with the<strong> &lt;i></strong> tag.
+				</p>
+				<br>
+            	<h5><strong>Ionicons</strong></h5>
+				<pre> &lt;i class="ion ion-ios-pulse ion-4x">&lt;/i></pre>
+                <p>
+					Full icon list for ionic icons<br>
+					<a href="http://ionicons.com/" target="_blank">http://ionicons.com/</a>
+				</p>
+				<br><br>
+				<h5><strong>Font Awesome</strong></h5>
+				<pre> &lt;i class="fa fa-check-square-o fa-3x"> &lt;/i></pre>
+				<p>
+					Please take a look here to have a full list of the available icons<br>
+					<a href="http://fontawesome.io/icons/" target="_blank">http://fontawesome.io/icons/</a>
+				</p>
+                
+                <br><br><br>
+            	<h4><strong>Gallery</strong></h4>
+                <p>Besides the isotope script there is a simple gallery element which you can use. <em>(see portfolio-single-2.html)</em></p>
+                <pre>
+&lt;ul class="gallery <strong>gallery-col3 spaced</strong>">
+  &lt;li>&lt;img src="image-1.jpg" />&lt;/li>
+  &lt;li>&lt;img src="image-2.jpg" />&lt;/li>
+  &lt;li>&lt;img src="image-2.jpg" />&lt;/li>
+&lt;/ul></pre>
+				<p>Choose between <strong>gallery-col2, gallery-col3, gallery-col4, gallery-col5 and gallery-col6</strong> for the numbers of images shown per row.</p>
+                <p>Add the class <strong>spaced</strong> if you want a spacing/margin between the images</p>
+                <br><br><br>
+            	<h4><strong>Animations</strong></h4>
+                <p>In general you can animate each elemnt.  Just add the class <strong>has-animation</strong> to your element. This element will be hidden on start and as soon as it gets visible it gets animated.</p>
+                <pre>
+&lt;div class="column-section clearfix">
+  &lt;div class="column one-third <strong>has-animation</strong>">
+  ...
+  &lt;/div>
+  &lt;div class="column one-third <strong>has-animation" data-delay="200"</strong>>
+  ...
+  &lt;/div>
+  &lt;div class="column one-third <strong>last-col has-animation" data-delay="400"</strong>>
+  ...
+  &lt;/div>
+&lt;/div> <!-- END .column-section --></pre>
+                <p>Optionally you also can add a delay.</p>
+                
+                <br><br><br>
+            	<h4><strong>Buttons</strong></h4>
+                <p>There are 3 predefined buttons for this tempalte</p>
+                <ol>
+                	<li><strong>sr-button1</strong>: black background and colored background on hover</li>
+                	<li><strong>sr-button2</strong>: colored background and black background on hover</li>
+                	<li><strong>sr-button3</strong>: white background and colored background on hover</li>
+                	<li><strong>sr-button4</strong>: colored background and white background on hover</li>
+                </ol>
+                <pre>
+&lt;a class="<strong>sr-button sr-button2 medium-button</strong>" href="#" >Button Example&lt;/a></pre>
+				<p>Choose also between 4 different sizes (mini-button,small-button,medium-button,big-button)</p>
+			</div>
+			          
+          <div id="css" class="section">
+           	<h4 class="sectiontitle"><strong>Css Files</strong></h4>
+            <p>
+            You should find the following css files 
+            </p> 
+            <ol>
+            	<li><span class="accent">style.css</span> -> main style <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">font-awesome.min.css</span> -> css for fontawsome icons <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">ionicons.css</span> -> css for Ionicons icons <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">mqueries.css</span> -> css rules for being responsive <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">lightcase.css</span> -> style for lightcase</li>
+            	<li><span class="accent">isotope.css</span> -> style for isotope animations (portfolio filter)</li>
+            	<li><span class="accent">owl.carousel.css</span> -> owlcarousel css</li>
+            	<li><span class="accent">wolf.css</span> -> style wolf parallax script</li>
+            </ol>
+            <p>
+            	All css files with <span class="red"><b>!important</b></span> must be included in all html files.<br>
+				The other files are only needed if you use the appropriate jquery script in the file.
+            </p>
+			<p>
+				<b>Example:</b><br>
+				The isotope.css from the isotpe plugin is only included in the index-masonry.html & blog.html because that's the only files which use the plugin.
+			</p>
+			<p class="attention red">
+            	<strong>Note:The mqueries.css must always be the last css file!</strong>
+            </p> 
+				
+				<br><br><br>
+				<h4><strong>Customize css</strong></h4>
+				<p class="attention">
+					I recommend to create a custom css file to add all your customizations, or use the bottom of the style.css.  You should find a CUSTOM Section.  If there is an update of the template you can easily copy your customization to the updated style.css.
+				</p>
+				<pre>
+/*---------------------------------------------- 
+16. CUSTOM STYLE
+------------------------------------------------*/
+
+/*YOUR CUSTOM CSS*/</pre>
+          </div>
+          
+          <div id="javascript" class="section">
+           	<h2 class="sectiontitle"><strong>Javascript</strong></h2>
+            <p>
+            You should find the following js files 
+            </p> 
+            <ol>
+            	<li><span class="accent">jquery-2.1.4.min.js</span> -> jquery library <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">script.js</span> -> initiaise all different scripts <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.easing.compatibility.js</span> -> easing compatibility <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.easing.1.3.js</span> -> easing script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.visible.min.js</span> -> visible script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">tweenMax.js</span> -> tweenMax for smooth animations <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.pace.js</span> -> prelaoder script</li>
+            	<li><span class="accent">jquery.wolf.min.js</span> -> lightbox script</li>
+            	<li><span class="accent">jquery.isotope.min.js</span> -> masonry script</li>
+            	<li><span class="accent">jquery.owl.carousel.min.js</span> -> owlcarousel script</li>
+            	<li><span class="accent">jquery.backgroundparallax.min.js</span> -> image parallax background script</li>
+            	<li><span class="accent">jquery.bgvideo.min.js</span> -> background video script</li>
+            	<li><span class="accent">jquery.lightcase.min.js</span> -> lightbox script</li>
+            	<li><span class="accent">jquery.fitvids.min.js</span> -> size up/down all videos to parent container</li>
+            	<li><span class="accent">form-validation.min.js</span> -> checks + sends the contact form</li>
+            </ol>
+            	<p>
+            	All js files with <span class="red"><b>!important</b></span> must be included in all html files.<br>
+				Please include the other script only when needed.  This will increase the page speed.
+            	</p>
+				<p>
+				<p class="attention red">
+            	<strong>Note:<br>
+                The script.js & the must always be the last js file!  This is also the file you can edit if needed.</strong>
+            	</p>
+				<p class="attention">
+            	<strong>Note:</strong>
+                All scripts are included at the bottom of the html before closing the body tag.  <br>
+            	</p>
+          </div>
+          
+          
+          
+          <div id="ressources" class="section">
+           	<h4 class="sectiontitle"><strong>Ressources</strong></h4>
+            <ul>
+                <li>latest jquery version: jQuery from John Resig <br><a href="http://jquery.com/">http://jquery.com/</a></li>
+                <li>jquery.isotope.min.js: Isotope from David DeSandro <br><a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a></li>
+                <li>jquery.easing.1.3.js: Easing from George Smith <br><a href="http://gsgd.co.uk/sandbox/jquery.easIng.php">http://gsgd.co.uk/sandbox/jquery.easIng.php</a></li>
+                <li>jquery.owlcarousel.min.js: Owlcarousel from Bartosz Wojciechowski <br><a href="http://owlgraphic.com/owlcarousel/index.html">http://owlgraphic.com/owlcarousel/index.html</a></li>
+                <li>jquery.fitvids.min.js: Video Fits <br><a href="http://fitvidsjs.com/">http://fitvidsjs.com/</a></li>
+                <li>jquery.visible.min.js: Check the visibility <br><a href="https://github.com/teamdf/jquery-visible/">https://github.com/teamdf/jquery-visible/</a></li>
+                <li>tweenMax.js: animation script from Greensock <br><a href="http://greensock.com/tweenmax">http://greensock.com/tweenmax</a></li>
+                <li>jquery.lightcase.min.js: lightbox script from Cornel Bopp Art <br><a href="http://cornel.bopp-art.com/lightcase/">http://cornel.bopp-art.com/lightcase/</a></li>
+                <li>jquery.pace.js: preloader script from HubSpot <br><a href="http://github.hubspot.com/pace/docs/welcome/">http://github.hubspot.com/pace/docs/welcome/</a></li>
+                <li>jquery.visible.min.js: visible by CustomD <br><a href="https://github.com/customd/jquery-visible">https://github.com/customd/jquery-visible</a></li>
+            </ul>
+				<p>
+					All other scripts are done by SpabRice and are only allowed to use within this template.
+				</p>
+          </div>
+          
+                      
+        </div>        
+        
+	</div>
+
+</div><!-- #page -->    
+</body>
+</html>

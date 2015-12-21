@@ -1,0 +1,324 @@
+/*---------------------------------------------- 
+Reset
+------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%; }
+	
+ol, ul  { list-style: none; }
+
+:focus  { outline: 0; }
+
+/* deleting the default appearence for form elements */
+input, textarea, select { -moz-appearance: none; -webkit-appearance: none; }
+
+.clearfix:after { content: ""; display: block; clear: both; visibility: hidden; font-size: 0;  height: 0; }
+.clearfix { *display: inline-block; height: 1%; }
+.clear { clear: both; display: block; font-size: 0;	height: 0; line-height: 0; width:100%; }
+
+/* HTML5 display definitions */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, dialog { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; visibility: hidden; }
+
+
+
+
+/*---------------------------------------------- 
+Basics
+------------------------------------------------*/
+html {
+	height: 100%;
+	font-size: 100%;
+	overflow-y: scroll; /* Force a scrollbar in non-IE */
+	-webkit-text-size-adjust: 100%; /* Prevent iOS text size adjust on orientation change without disabling user zoom */
+	-ms-text-size-adjust: 100%;
+	position: relative;
+	}
+
+body {
+	font-family: Helvetica, Arial, sans-serif; font-size:13px; color:#4c4c4c; text-align: left; line-height:21px;
+	position: relative;
+	background: #f7f7f7;
+	}
+::selection { background:#169e69; color:#fff; }
+::-moz-selection { background:#169e69; color:#fff; }
+::-webkit-selection { background:#169e69; color:#fff; }
+
+
+
+
+
+/*---------------------------------------------- 
+Headings
+------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #333333;
+	font-weight: normal;
+	}
+
+h1 { font-size: 34px; line-height: 42px; }
+h2 { font-size: 28px; line-height: 36px; }
+h3 { font-size: 22px; line-height: 28px; }
+h4 { font-size: 18px; line-height: 24px; }
+h5 { font-size: 15px; line-height: 20px; }
+h6 { font-size: 13px; line-height: 17px; }
+
+.sectiontitle {
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 15px;
+	}
+
+/* Links
+---------------------------------------- */
+a {
+	text-decoration: none;
+	color: #169e69;
+	cursor: pointer;
+	}
+
+a:hover {
+	color: #333333;
+	}
+
+p a {
+	color: #ed4807;
+	}
+	
+p a:hover {
+	color: #333333;
+	}
+
+
+/* Embedded content
+---------------------------------------- */
+img{
+	max-width: 100%; 
+	height: auto;
+	display:block;
+	}
+	
+img {
+	width: auto;
+	max-width: 100%; 
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	}
+	
+	
+/* Paragraph
+---------------------------------------- */	
+p { 
+	margin-top: 20px; 
+	}
+	
+div p:first-child { 
+	margin-top: 0px; 
+	}
+	
+pre, code {
+	padding: 10px;
+	margin-top: 20px;
+	font-size: 11px;
+	line-height: 16px;
+	border: 1px solid #81d3fd;
+	background: #f4fafd;
+	color: #666;
+	display: block;
+	}
+	div pre:first-child, div code:first-child { margin-top: 0px; }	
+
+
+/* Lists
+---------------------------------------- */
+#content ul {
+	margin-top: 15px;
+	padding-left: 45px;
+	}
+
+#content ul li {
+	padding-left: 0px;
+	list-style: disc;
+	line-height: 22px;
+	padding: 3px 0;
+	}
+	
+#content ol {
+	margin-top: 15px;
+	margin-left: 45px;
+	list-style: decimal;
+	}
+	
+#content ol li {
+	line-height: 22px;
+	padding: 3px 0;
+	}
+
+
+
+
+/*---------------------------------------------- 
+Layout
+------------------------------------------------*/
+#page {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	}
+
+.wrapper {
+	width: 940px;
+	margin: 0 auto;
+	}
+	
+#sidebar {
+	width: 240px;
+	}
+	
+#content {
+	width: 660px;
+	}
+	
+.left_float { float: left; }
+.right_float { float: right; }
+
+
+
+
+
+/*---------------------------------------------- 
+Main Nav
+------------------------------------------------*/
+ul#mainnav {
+	margin-top: 20px;
+	}
+	
+ul#mainnav li {
+	line-height: 19px;
+	list-style: none;
+	padding: 3px 0;
+	}
+	
+ul#mainnav li a.important {
+	color: #F00;
+	}
+	
+	
+	
+/*---------------------------------------------- 
+Section
+------------------------------------------------*/
+.section {
+	background: #ffffff;
+	border: 1px solid #e5e5e5;
+	padding: 20px;
+	margin-top: 40px;
+	position: relative;
+	}
+	.section-important { border: 2px solid #F00;}
+	
+.accent {
+	color: #169e69;
+	font-style: italic;
+	}
+	
+.image {
+	text-align: center;
+	margin-top: 20px;
+	}
+	
+.image img {
+	display: inline-block;
+	max-width: 100%;
+	}
+	
+li .image {
+	text-align: left;
+	margin-top: 10px;
+	}
+
+.red {
+	color: #F00;
+	}
+	
+.attention {
+	background: #fffae4;
+	padding: 10px;
+	border: 1px solid #dcd5ad;
+	}
+	
+.question {
+	margin-top: 20px;
+	border: 1px solid #e5e5e5;
+	padding: 10px;
+	background: #f7f7f7;
+	}
+	
+.question h6 {
+	color: #3076bd;
+	}
+	
+.answer {
+	padding-left: 10px;
+	margin-top:10px;
+	}
+	
+.one-left {
+	width: 300px;
+	float: left;
+	}
+	
+.one-right {
+	width: 300px;
+	float: right;
+	}
+	
+	
+	
+/* video tutorial */
+.video-tutorial  {
+	background: #4da5f5;
+	color: #4da5f5;
+	padding: 10px 15px;
+	width: 40px;
+	height: 27px;
+	border-radius:3px;-moz-border-radius:3px;-khtml-border-radius:3px;-webkit-border-radius:3x;
+	position: absolute;
+	top: 0;
+	left: -80px;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: bold;
+	text-align: center;
+	}
+	
+.video-tutorial:hover  {
+	background: #333333;
+	color: #333333;
+	}
+	
+.video-tutorial span.icon {
+	display: block;
+	width: 40px;
+	height: 27px;
+	background: url(images/video.png) no-repeat;
+	}
+	
+.video-tutorial span.text {
+	margin-top: 15px;
+	display: block;
+	width: 40px;
+	height: 27px;
+	}

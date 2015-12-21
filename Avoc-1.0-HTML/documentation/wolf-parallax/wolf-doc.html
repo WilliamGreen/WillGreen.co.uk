@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Wolf Parallax Documentation</title>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+</head>
+
+<body>
+<div id="page">
+
+	<header>
+    	<div class="wrapper clearfix">
+            <h2>Wolf Parallax</h2>
+        </div>
+    </header>
+
+	<div class="wrapper clearfix">
+	
+    	<div id="sidebar" class="left_float">
+            <ul id="mainnav">
+				<li><a href="#installation">Installation</a></li>
+            	<li><a href="#options">Options</a></li>
+            	<li><a href="#itemsize">Item size</a></li>
+            	<li><a href="#customspeed">Custom Speed</a></li>
+            	<li><a href="#captions">Captions</a></li>
+            	<li><a href="#filter">Filter</a></li>
+            </ul>
+        </div>
+    
+    
+        <div id="content" class="right_float">
+            
+          
+          	<div id="installation" class="section">
+            
+        		<h1 class="sectiontitle">Installation</h1>
+                <p>Get started with Wolf Parallax in 4 easy steps!</p>
+                
+                <h4><strong>Step 1</strong> - Include CSS</h4>
+                <p>Add the wolf css file to the &lt;head> of your document.</p>
+				<p><pre>
+&lt;link rel="stylesheet" href="files/css/wolf.css" /></pre></p>
+
+				<h4><strong>Step 2</strong> - Include JS</h4>
+                <p>Add the javascript/jQuery files in the footer of your document. You can also choose to host jQuery on your own server, but Google is nice enough to take care of that for us.</p>
+				<p><pre>
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">&lt;/script>
+&lt;script type='text/javascript' src='tweenMax.js'>&lt;/script>
+&lt;script type='text/javascript' src='jquery.wolf.min.js'>&lt;/script></pre></p>
+
+				<h4><strong>Step 3</strong> - Add HTML markup</h4>
+                <p>Make sure to use this html markup for your. Start with a single container element <br><em>&lt;div class="wolf-grid"></em><br>
+                Continue to add your different items. It is important to use classes <code>wolf-item</code> and <code>wolf-item-inner</code> and <code>wolf-media</code> because the script targets them specifically. Place your images and anything else you desire into each <em>wolf-item-inner</em>.
+                </p>
+				<p><pre>
+&lt;div class="wolf-grid">
+
+  &lt;div class="wolf-item">
+    &lt;div class="wolf-item-inner">
+      &lt;div class="wolf-media">&lt;img src="image1.jpg">&lt;/div>
+      &lt;div class="wolf-caption">caption content 1&lt;/div>
+    &lt;/div>
+  &lt;/div>
+  
+  &lt;div class="wolf-item">
+    &lt;div class="wolf-item-inner">
+      &lt;div class="wolf-media">&lt;img src="image2.jpg">&lt;/div>
+      &lt;div class="wolf-caption">caption content 2&lt;/div>
+    &lt;/div>
+  &lt;/div>
+  
+  &lt;div class="wolf-item">
+    &lt;div class="wolf-item-inner">
+      &lt;div class="wolf-media">&lt;img src="image3.jpg">&lt;/div>
+      &lt;div class="wolf-caption">caption content 3&lt;/div>
+    &lt;/div>
+  &lt;/div>
+  
+&lt;/div></pre></p>
+				
+                <p>You can use custom names for <code>wolf-grid</code></p>
+				<p class="important">Do not change the classes <code>wolf-item</code> and <code>wolf-item-inner</code> and <code>wolf-media</code></p>
+                
+                <h4><strong>Step 4</strong> - Call the wolf script</h4>
+                <p>Lastly, call the wolf initialiser on your javascript file or in the &lt;head> of your document.</p>
+				<p><pre>
+jQuery(window).load(function($) {
+  jQuery('.wolf-grid').wolf();
+});</pre></p>
+
+			</div>	<!-- END installation -->
+            
+            <div id="options" class="section">
+            
+        		<h1 class="sectiontitle">Options</h1>
+                <p>See here the list of all script options which you can call by initialising the plugin</p>
+				
+                <div class="option-item">
+                	<h4>parallax</h4>
+                    <p>
+                    Type: <code>boolean</code><br>
+                    Default: <code>true</code><br>
+                    </p>
+                    <p><em>Adds/Remove the default parallax effect on scroll.</em></p>
+                </div>
+                
+                <div class="option-item">
+                	<h4>captionparallax</h4>
+                    <p>
+                    Type: <code>boolean</code><br>
+                    Default: <code>true</code><br>
+                    </p>
+                    <p><em>When true the caption will have an additional parallax effect relative to the wolf-media element.  This only have impact if you use wolf-caption class in your items.</em></p>
+                </div>
+                
+                <div class="option-item">
+                	<h4>speed</h4>
+                    <p>
+                    Type: <code>number</code><br>
+                    Default: <code>1</code><br>
+                    </p>
+                    <p><em>The default speed will be multiplicated by this value.</em></p>
+                </div>
+                
+                <div class="option-item">
+                	<h4>randomhorizontaloffset</h4>
+                    <p>
+                    Type: <code>boolean</code><br>
+                    Default: <code>false</code><br>
+                    </p>
+                    <p><em>Adds a horizontal random offset for each item</em></p>
+                </div>
+                
+                <div class="option-item">
+                	<h4>randomverticaloffset</h4>
+                    <p>
+                    Type: <code>boolean</code><br>
+                    Default: <code>false</code><br>
+                    </p>
+                    <p><em>Adds a vertical random offset for each item</em></p>
+                </div>
+                
+                 <div class="option-item">
+                	<h4>mouseparallax</h4>
+                    <p>
+                    Type: <code>boolean</code><br>
+                    Default: <code>false</code><br>
+                    </p>
+                    <p><em>Adds an additional parallax effect on mouse move</em></p>
+                </div>
+                
+                <div class="option-item">
+                	<h4>filter</h4>
+                    <p>
+                    Type: <code>string</code> (classname of item)<br>
+                    Default: <code>false</code><br>
+                    </p>
+                    <p><em>Filters the items with the given classname. Do not call this option on initialise.</em></p>
+                </div>
+                
+                <div class="option-item">
+                	<h4>filtertype</h4>
+                    <p>
+                    Type: <code>string</code><br>
+                    Default: <code>hide</code><br>
+                    </p>
+                    <p><em>Filter type. Choose between <code>hide</code> and <code>opacity</code></em></p>
+                </div>
+                
+                <br><br>
+                <p><strong>Example:</strong></p>
+   				<p><pre>
+jQuery('.wolf-grid').wolf({
+  parallax:false,
+  randomhorizontaloffset:true
+});</pre></p>
+				<p>You can also call the options via the <code>data</code> attribute on the wolf container element.  Note that this will overwrite the options called on the initialiser via javascript.</p>
+                <p><pre>
+&lt;div class="wolf-grid" data-randomhorizontaloffset="true" data-mouseparallax="true"></pre></p>
+                
+          	</div>	<!-- END options -->
+            
+                        
+            <div id="itemsize" class="section">
+            
+        		<h1 class="sectiontitle">Item size</h1>
+                <p>By default the script will align 2 items per row. ( half / half of the parent container width)</p>
+                <p>You have the option to individually add rows with 3items or 1 single items.  Add the class <code>wfull</code> or <code>wthird</code> to the wolf-item.</p>
+                
+                <p><pre>
+&lt;div class="wolf-item <strong>wfull</strong>">
+<em>or</em>
+&lt;div class="wolf-item <strong>wthird</strong>"></pre></p>
+            
+            </div>	<!-- END itemsize -->
+            
+            
+            <div id="customspeed" class="section">
+            
+        		<h1 class="sectiontitle">Custom Speed</h1>
+                <p>You have the possibility to change the speed of each item individually.  By default the script adds random parallax speeds (on scroll) to the different items.  To change/overwrite them you just need to add the <code>data-speed</code> attribute on the wanted item.<br>Choose any positiv or negativ value.</p>
+                
+                <p><pre>
+&lt;div class="wolf-item" <strong>data-speed="2"</strong>>
+<em>or</em>
+&lt;div class="wolf-item" <strong>data-speed="-0.8"</strong>></pre></p>
+
+				<p>The higher the spread is between the different speeds, the more chance there is that some items will overlay others!<br>
+            So it's recommended to choose a value between -2 and +2 but it's up to you.</p>
+            
+            </div>	<!-- END customspeed -->
+            
+            
+            <div id="captions" class="section">
+            
+        		<h1 class="sectiontitle">Caption options</h1>
+                <p>If you don't add any classes to the wolf-caption, the captions are postioned by default:<br>
+                <strong>- on the top right corner for all image elements on the left site</strong>,<br>
+                <strong>- and on the bottom left corner for all image elements on the right site</strong></p>
+                
+                <p>To control the position of your captions you can add the classes to the wolf-caption element:<br>
+                <strong>- 'ctop' OR 'cbottom' AND </strong><br>
+                <strong>- 'cleft' OR 'cright' OR 'ccenter'</strong><br>
+                to change the position individually for each wolf-caption element </p>
+                
+                <p><pre>
+&lt;div class="wolf-caption <strong>ctop cright</strong>"></pre></p>
+
+				<p><span class="important">Note</span>: If you add these classes, it will force the position, even after you filtered the items which could lead to some display issues.<br>If you don't have specified the positioning by the above classes and the filtertype 'hide' is active, the position of the caption will change depending the image position (mirror effect).
+                </p>
+                
+                <h5><strong>Adding additional offset to the captions</strong></h5>
+                <p>Additionally you can add some offset values using inline css to have even more control on it.</p>
+                
+                <p>use <code>margin-right</code> if your caption has right position relative to the media and <code>margin-left</code> if it has left position</p>
+                <p><pre>
+<em>&lt;!-- for right positioned captions relative to the media --></em>                
+&lt;div class="wolf-caption" <strong>style="margin-right:50px"</strong>>
+
+<em>&lt;!-- for left positioned captions relative to the media --></em>                
+&lt;div class="wolf-caption" <strong>style="margin-left:20%"</strong>></pre></p>
+            
+            	<p>use <code>margin-top</code> if your caption has top position relative to the image and <code>margin-bottom</code> if it has bottom position</p>
+            	<p><pre>
+<em>&lt;!-- for top positioned captions relative to the media --></em>                
+&lt;div class="wolf-caption" <strong>style="margin-top:20%"</strong>>
+
+<em>&lt;!-- for bottom positioned captions relative to the media --></em>                
+&lt;div class="wolf-caption" <strong>style="margin-bottom:40px"</strong>></pre></p>
+				
+                <p class="note">ATTENTION: All your custom caption position settings/options don't have effect on mobile devices where the parallax is not supported.</p>
+                
+                <h5><strong>Static captions</strong></h5>
+                <p>As described above, the captions will position top/right or bottom/left by default. By adding the class <code>static</code> to the caption element, it will delete the position and just be placed below the media element without any styling.</p>
+               <p><pre>
+&lt;div class="wolf-caption <strong>static</strong>"></pre></p>
+
+
+				<h5><strong>Text captions</strong></h5>
+                <p>The captions should only contain some short infos like a name, title, etc.  If you're planning to add more text it's recommended to use the class <code>wolf-text</code> to the wolf-item.  It uses a different approach to place the caption which is important for responsive reasons.</p>
+                <p>Optionally you can also add a custom width in order to have control how much the caption is overlaying the media element or not.  it's recommended to use % values for responsive.</p>
+                
+                <p><pre>
+&lt;div class="wolf-item <strong>wolf-text</strong>" <strong>style="width:50%"</strong>></pre></p>
+            
+            </div>	<!-- END captions -->
+            
+            
+            <div id="filter" class="section">
+            
+        		<h1 class="sectiontitle">Filter</h1>
+                <p>Wolf can hide and show items with the <code>filter</code> option. Items that match that filter will be shown. Items that do not match will be hidden.</p>
+                
+                <h4>Add classes to items</h4>
+                <p>Use class selectors to easily filter items. <br>
+                For example, each item can have several identifying classes: web, photography, print, branding.</p>
+                
+                <p><pre>
+&lt;div class="wolf-item <strong>web print</strong>">...
+
+&lt;div class="wolf-item <strong>branding</strong>">...
+
+&lt;div class="wolf-item <strong>photgraphy</strong>">...
+
+&lt;div class="wolf-item <strong>print branding</strong>">...</pre></p>
+
+                <h4>Filter option</h4>
+                <p>Set a selector with the filter option on a click event.</p>
+                
+                <p><pre>
+<em>// filter .web items</em>             
+jQuery('.wolf-grid').wolf({ filter: '.web', filtertype: 'hide' });
+
+<em>// filter .photography items with opacity type</em>             
+jQuery('.wolf-grid').wolf({ filter: '.photography', filtertype: 'opacity' });</pre></p>
+            
+            </div>	<!-- END filter -->
+            
+            
+        </div>        
+        
+	</div>
+
+</div><!-- #page -->    
+</body>
+</html>

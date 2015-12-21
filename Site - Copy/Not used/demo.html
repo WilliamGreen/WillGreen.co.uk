@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Candy One Page Site Template</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- Remove this For Non-responsive -->
+	
+	<!-- favicon -->
+	<link rel="shortcut icon" href="img/favicon.png">
+	
+	<link href="css/candy.css" rel="stylesheet" type="text/css" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />	
+	<link href="css/responsive.css" rel="stylesheet" type="text/css" />
+	
+	<!--<link href="css/custom-css/custom-css.css" rel="stylesheet" type="text/css" />-->
+	
+	<!-- Google Font -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200%7CMontserrat:400,700' rel='stylesheet' type='text/css'>
+	
+	
+	<style>
+		.page-header_demo_bg{
+			background-image:url('img/slide_11.jpg'); 
+			background-size:cover;
+			height:520px;
+		}
+		.demo-nav{
+			border-bottom:1px solid #eee;
+			padding:30px 0;
+		}
+		.demo-nav li{
+			margin-left:20px;
+		}
+	</style>
+	
+</head>
+<body>	
+	<div class="content">
+
+		<div id="page-header-1" class="page-header page-header_demo_bg white rel-img" data-80-top="background-position:0px -200px;" data-top-bottom="background-position:0px 100px;">
+			<div class="overlay"></div>
+			<div class="page-header-container container">
+				<div class="page-header-content text-center">
+					<div class="text-rotator"><p class="rotate page-header-title primary-typo">Candy|Creative|One & Multi Page|Template</p></div>
+				</div>
+			</div>
+		</div>
+		<section id="demo" class="demo-page">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-12 margin-top-30">
+						<nav class="page-scroll demo-nav text-right">
+							<ul class="list-inline primary-typo">
+								<li><a href="#" class="btn-link">Support</a></li>
+								<li><a href="#" class="btn-link strong primary-typo">Purchase</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-sm-6 col-md-4 text-center margin-90">
+						<a href="http://demo.agnidesigns.com/Candy-HTML/index.html"><img src="demo/demo-1.jpg" alt="demo_1"/></a>
+						<p class="margin-top-30 no-margin-bottom primary-typo strong"><a href="http://demo.agnidesigns.com/Candy-HTML/index.html">Demo 1</a></p>
+					</div>
+					<div class="col-sm-6 col-md-4 text-center margin-90">
+						<a href="http://demo.agnidesigns.com/Candy-HTML/index2.html"><img src="demo/demo-2.jpg" alt="demo_2"/></a>
+						<p class="margin-top-30 no-margin-bottom primary-typo strong"><a href="http://demo.agnidesigns.com/Candy-HTML/index2.html">Demo 2</a></p>
+					</div>
+					<div class="col-sm-6 col-md-4 text-center margin-90">
+						<a href="http://demo.agnidesigns.com/Candy-HTML/index3.html"><img src="demo/demo-3.jpg" alt="demo_3"/></a>
+						<p class="margin-top-30 no-margin-bottom primary-typo strong"><a href="http://demo.agnidesigns.com/Candy-HTML/index3.html">Demo 3</a></p>
+						<p class="margin-bottom-30">Creative, Personal</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Footer menu -->
+		<div id="footer-area" class="footer">
+			<div class="container">
+				<div class="footer-social text-center">
+					<ul class="social-icons small list-inline">
+						<li><a href="#">Buy Now</a></li>
+						<li><a href="#">Ask Queries</a></li>
+					</ul>
+				</div>
+				<div class="separator separator_center footer-sep">
+					<span class="sep_holder sep_holder_r"><span class="sep_line"></span></span>
+				</div>	
+				<div id="colophon" class="footer-colophon text-center">
+					<p class="site-info small">Candy | One & Multi Page Site Template</p>
+				</div>
+			</div>
+		</div>
+		
+	</div><!-- /content -->
+	
+	<div class="throbbers_loader">
+		<div class="throbber">Just a sec.</div>
+	</div>
+	
+	
+	<!-- Javascripts -->
+	
+	
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/no-compress/smoothscroll.js"></script>
+	<script src="js/no-compress/skrollr.min.js"></script>
+	<script src="js/no-compress/jquery.simple-text-rotator.min.js"></script> 
+	<script type="text/javascript">
+		$(window).load(function() {
+			// will first fade out the loading animation
+			$(".throbber").fadeOut();
+			// will fade out the whole DIV that covers the website.
+			$(".throbbers_loader").delay(500).slideUp('slow');
+			if(!(/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+				skrollr.init({
+					smoothScrolling: false,
+					mobileDeceleration: 0.004,
+					forceHeight: false,
+				});	
+			}
+			else{
+				$('html').addClass('no-Skrollr');
+			}
+			
+		})
+		jQuery(document).ready(function(){
+		$('.text-rotator').each(function() {
+			$(this).find('.rotate').textrotator({
+				separator: "|",
+				speed: 4000
+			});
+		});
+		});
+	</script>
+	
+</body>
+</html>

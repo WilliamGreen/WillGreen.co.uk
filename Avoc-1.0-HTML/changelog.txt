@@ -1,0 +1,7 @@
+*** AVOC HTML/CSS Changelog ***
+
+
+July 03 2015 - Version 1.0
+	
+	* First release
+
